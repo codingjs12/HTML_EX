@@ -27,7 +27,21 @@
         #blue {
             color: blue;
         }
+
+        .red {
+            color: red;
+        }
         
+        .blue {
+            color: blue;
+        }
+        
+        .accent {
+            font-weight: bold;
+            font-size: 50px;
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
@@ -43,6 +57,29 @@
                 태그속성에 style로 직접 넣는 방법
             </li>
         </ol>
+    </div>
+
+    <span class="bg2">
+        ※<span id="red"> inline</span>과 <span id="blue">block</span>차이 잘 기억하자
+    </span>
+
+    <div class="blue">
+        <div>
+            1. 확장자가
+            <span class="red accent" style="background-color: aqua;">
+                .css
+            </span>
+            인 파일을 참조하는 방법
+        </div>
+        <div>
+            2. 
+            <span class="red accent">
+                style
+            </span>
+            태그안에 정의하는 방법</div>
+        <div style="background-color: greenyellow; font-weight: bold;">
+            3. 태그안에 style로 직접 넣는 방법
+        </div>
     </div>
 
     <span class="bg2">
