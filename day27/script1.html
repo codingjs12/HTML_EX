@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <div></div>
+    </div>
+</body>
+</html>
+<script>
+    /* let a = 10;
+    let b = "홍길동";
+    let c = 1.5;
+    let d = true;
+    let e = {"name" : "홍길동"};
+    let f = [1,2,3,4,5];
+    let g = new Date(); */
+    let flg = confirm("삭제하시겠습니까?");
+    if (flg) {
+        alert("삭제되었습니다!");
+    } else {
+        alert("취소되었습니다!");
+    }
+    let name = prompt("이름을 입력해주세요.");
+    document.write(name + "님 환영합니다!");
+    console.log(name + "님 환영합니다.!");
+
+    for(let i = 1; i < 10; i++) {
+        console.log(i);
+        document.write("<h1>" + i + "</h1> <br>");
+    }
+</script>
