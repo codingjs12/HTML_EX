@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 10px;
+            /* animation-name: rotate;
+            animation-duration: 3s;
+
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            animation : rotate 3s infinite alternate;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+                background-color: red;
+            }
+            10% {
+                background-color: rgb(132, 255, 255);
+            }
+            20% {
+                background-color: rgb(56, 117, 117);
+            }
+            30% {
+                background-color: rgb(29, 78, 78);
+            }
+            40% {
+                background-color: aqua;
+            }
+
+            50% {
+                transform: perspective(200px) rotateX(180deg) rotateY(0deg);
+                background-color: green;
+            }
+            60% {
+                background-color: yellowgreen;
+            }
+            70% {
+                background-color: rgb(120, 255, 80);
+            }
+            80% {
+                background-color: rgb(43, 216, 57);
+            }
+            90% {
+                background-color: yellow;
+            }
+            to {
+                transform: perspective(200px) rotateX(180deg) rotateY(180deg);
+                background-color: blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

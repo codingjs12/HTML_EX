@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 500px;
+            height: 700px;
+
+            background-image: url(img/38312.png);
+            background-size: cover;
+        }
+        
+        .card:hover{
+            animation : change 3s infinite alternate;
+        }
+
+        @keyframes change {
+            from {
+                width: 500px;
+                height: 700px;
+                transform: rotateY(0deg);
+                background-image: url(img/38312.png);
+                background-size: cover;
+            }
+            20% {
+                width: 500px;
+                height: 700px;
+                background-image: url(img/38312.png);
+                background-size: cover;
+            }
+            
+            to {
+                width: 500px;
+                height: 700px;
+                transform: rotateY(180deg);
+                background-image: url(img/1.jpg);
+                background-size: cover;
+            }
+        }
+
+        .box {
+            width: 500px;
+            height: 700px;
+            background-image: url(img/38312.png);
+            background-size: cover;
+            margin: 50px;
+            transition: transform 3s background-image 1s 1s;
+        }
+
+        .box:hover{
+            transform: rotateY(180deg);
+            background-image: url(img/1.jpg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+    <div class="box"></div>
+</body>
+</html>

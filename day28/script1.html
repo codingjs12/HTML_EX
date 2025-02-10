@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">타이틀!!</h1>
+    <div>
+        <p>자바</p>
+        <p>오라클</p>
+    </div>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button onclick="fnAlert()">알림창</button>
+</body>
+</html>
+<script>
+    let node1 = document.querySelector("#title");
+    node1.style.color = "red";
+    function sum(x,y) {
+        console.log(x+y);
+    }
+    function fnAlert() {
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        
+        alert(parseInt(num1) + parseInt(num2));
+        alert("안녕");
+    }
+</script>

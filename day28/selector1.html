@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: blue;
+        }
+
+        .txt1 {
+            font-weight: bold;
+        }
+
+        #id {
+            font-size: 30px;
+        }
+
+        span{
+            background-color: aqua;
+        }
+
+        div span { /*div 안에 있는 모든 span 태그에 적용*/
+            font-size: 30px;
+        }
+
+        div > span { /*div 안에 있는 자식 요소 중에 span태그에 적용*/
+            font-style: italic;
+        }
+
+        div, span { /*div, span 위치 상관없이 모두에게 적용*/
+            border: 1px solid black;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="txt1">
+        <a><span>자바!!!</span></a>
+    </div>
+    <span>오라클!!!</span>
+    <div class="txt1">
+        <p>css</p>
+        <span>HTML</span>
+    </div>
+</body>
+</html>
