@@ -7,7 +7,10 @@
     <title>Document</title>
     
     <style>
-
+        label > span {
+            display: inline-block;
+            width: 120px;
+        }
     </style>
 </head>
 
@@ -23,8 +26,8 @@
     </div>
     <div>
         <label><span>성별 : </span></label>
-        <label><span>남자<input type="radio" name="gender" id="male"></span></label>
-        <label><span>여자<input type="radio" name="gender" id="female"></span></label>
+        <label>남자<input type="radio" name="gender" id="male"></label>
+        <label>여자<input type="radio" name="gender" id="female"></label>
     </div>
     <div>
         <button onclick="fnJoin()">회원가입!</button>
