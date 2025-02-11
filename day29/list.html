@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>숫자 입력 :<input type="text" id="input"></div>
+    <button onclick="fnCreateNode()">리스트 추가</button>
+    <div>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function fnCreateNode() {
+        let input = document.querySelector("#input").value;
+        let list = document.querySelector("#list");
+
+        for (let index = 1; index <= input; index++) {
+            let element = document.createElement("li");
+            element.innerHTML = index;
+            
+            if(index % 2 == 1) {
+                let style = document.createAttribute("style");
+                style.value = "color : blue; font-weight : bold; ";
+                element.setAttributeNode(style);
+            }
+            list.appendChild(element);
+        }
+    }
+</script>
