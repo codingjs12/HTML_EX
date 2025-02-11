@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="radio" name="subject" value="java">java
+    <input type="radio" name="subject" value="html">html
+    <input type="radio" name="subject" value="oracle">oracle
+    <input type="radio" name="subject" value="jquery">jquery
+    <button onclick="fnSubject()">선택!</button>
+
+    <div>
+        <img src="img/poket1.png">
+    </div>
+</body>
+</html>
+<script>
+    function fnSubject() {
+        let subject = document.querySelector("input[name='subject']:checked").value;
+        let img = document.querySelector("img");
+
+        img.style.display = "inline";
+
+        // img.src = "img/" + subject + ".jpg";
+
+        if(subject == "java") {
+            img.src = "img/poket1.png";
+        } else if (subject == "html") {
+            img.src = "img/poket2.png";
+        } else if (subject == "oracle") {
+            img.src = "img/park1.jpg";
+        } else if (subject == "jquery") {
+            img.src = "img/poket1.png";
+        }
+
+        
+    }
+</script>

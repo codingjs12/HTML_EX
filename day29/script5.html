@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image {
+            width: 2000px;
+            height: 2000px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div><input type="checkbox" name="subject" value="java">자바</div>
+    <div><input type="checkbox" name="subject" value="oracle">오라클</div>
+    <div><input type="checkbox" name="subject" value="html">html/css/javascript</div>
+    <div><input type="checkbox" name="subject" value="jquery">jQuery</div>
+    <button onclick="fnSubject()">클릭!</button>
+    <div id="imageList">
+
+    </div>
+</body>
+
+</html>
+<script>
+    function fnSubject() {
+        let subject = document.querySelectorAll("input[name='subject']:checked");
+        let imageList = document.querySelector("#imageList");
+        imageList.innerHTML = "";
+        for(let i = 0; i < subject.length; i++) {
+            let img = document.createElement("img");
+            img.width=200;
+            img.heigt=200;
+            if(subject[i].value == "java") {
+                img.src = "img/poket1.png";
+            }
+            if(subject[i].value == "oracle") {
+                img.src = "img/poket2.png";
+            }
+            if(subject[i].value == "html") {
+                img.src = "img/park1.jpg";
+            }
+            if(subject[i].value == "jquery") {
+                img.src = "img/poket1.png";
+            }
+            
+            imageList.appendChild(img);
+        }
+    }
+</script>
