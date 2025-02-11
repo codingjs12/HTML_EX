@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +14,24 @@
         }
     </style>
 </head>
+
 <body>
     <div id="container">
-        <div></div>
+        <div><img src="img/poket1.png" id="poket"></div>
     </div>
 </body>
+
 </html>
 <script>
     let container = document.querySelector("#container");
-    container.onclick = (e)=> {
+    container.onclick = (e) => {
         console.log(e);
-        alert("클릭!");
+        alert(e.pageX + " , " + e.pageY);
     };
+
+    let img = document.querySelector("#poket");
+    img.onclick = function () {
+        alert(this.src);
+    }
+
 </script>
