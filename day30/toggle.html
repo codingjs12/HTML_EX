@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light-mode {
+            background-color: white;
+        }
+
+        .dark-mode {
+            background-color: #000014;
+            color: white;
+            
+        }
+
+        .mode {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 800px;
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+
+        .dark-mode .mode {
+            color: white;
+            background-color: #000014;
+            border: 1px solid white;
+        }
+
+        .dark-mode .box {
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <button class="mode" onclick="fnMode()">다크 모드</button>
+    <div class="box">
+        <h1>프로그래밍 재밌다</h1>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    function fnMode() {
+        let body = document.body;
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+        /*
+        let text = document.querySelector(".mode").textContent;
+        let setText = document.querySelector(".mode");
+        if(text == "다크 모드") {
+            setText.innerHTML = "라이트 모드";
+        } else {
+            setText.innerHTML = "다크 모드";
+        }
+        */
+       let btn = document.querySelector(".mode");
+       if (body.classList.contains('dark-mode')) {
+            btn.innerHTML = '라이트 모드';
+       } else {
+            btn.innerHTML = '다크 모드';
+       }
+
+
+    }    
+
+</script>

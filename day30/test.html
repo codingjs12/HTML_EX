@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contents {
+            margin: 100px auto;
+            width: 800px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <h1>메모장</h1>
+        <input type="text" id="input">
+        <button onclick="fnAppend()">추가</button>
+        <hr>
+        <ul id="list">
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    function fnAppend() {
+        let input = document.querySelector("#input").value;
+        let list = document.querySelector("#list");
+
+        let element = document.createElement("li");
+        element.innerHTML = input;
+        list.appendChild(element);
+
+        element.onclick = ()=>{
+            let del = confirm("내용 : " + element.textContent + "\n삭제하시겠습니까?");
+            if(del) {
+                list.removeChild(element);
+            }
+        };
+    }
+</script>
