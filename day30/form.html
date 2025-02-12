@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label > span {
+            display: inline-block;
+            width: 120px;
+        }
+
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label><span>아이디 : </span><input id="userId"></label>
+    </div>
+    <div>
+        <label><span>비밀번호 : </span><input type="password" id="userPw"></label>
+    </div>
+    <div>
+        <label><span>비밀번호확인 : </span><input type="password" id="pwCheck"></label>
+    </div>
+    <div>
+        <label><span>핸드폰 번호 : </span><input type="text" id="phone" placeholder="-없이 숫자만 입력"></label>
+    </div>
+    <div>
+        <label><span>관심언어 : </span></label>
+        <label>자바<input type="checkbox" name="subject" id="java"></label>
+        <label>오라클<input type="checkbox" name="subject" id="oracle"></label>
+        <label>HTML<input type="checkbox" name="subject" id="html"></label>
+        <label>파이썬<input type="checkbox" name="subject" id="python"></label>
+    </div>
+    <div>
+        <label><span>성별 : </span></label>
+        <label>남자<input type="radio" name="gender" id="male" checked="true"></label>
+        <label>여자<input type="radio" name="gender" id="female"></label>
+    </div>
+    <div>
+        <button onclick="fnJoin()">회원가입!</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function fnJoin() {
+        let userId = document.querySelector("#userId").value;
+        let userPw = document.querySelector("#userPw").value;
+        let pwCheck = document.querySelector("#pwCheck").value;
+        
+        let phone = document.querySelector("#phone").value;
+
+        
+        let list = document.getElementsByName("gender");
+        
+        if (userId.length < 6) {
+            alert("아이디는 6글자 이상이여야합니다.");
+            return;
+        }
+        
+        let idPattern = /^[a-z0-9]+$/;
+
+        if(!idPattern.test(userId)) {
+            alert("아이디는 숫자, 영어(소문자)로 구성되어야합니다.");
+            return;
+        }
+
+        let pwPattern = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
+        
+        if (userPw.length < 6) {
+            alert("비밀번호는 6글자 이상이여야합니다.");
+            return;
+        }
+    
+        if (!pwPattern.test(userPw)) {
+            alert("비밀번호에는 특수문자 1개이상");
+            return;
+        }
+    
+        if (userPw != pwCheck) {
+            alert("비밀번호가 다릅니다.");
+            return;
+        }
+
+        if(phone.length != 11) {
+            alert("11글자의 숫자를 입력하세요");
+            return;
+        }
+
+        let phonePattern = /^[0-9]*$/;
+
+        if(!phonePattern.test(phone)) {
+            alert("숫자만 입력 하세요");
+            return;
+        }
+
+        let checked = document.querySelector("input[name='subject']:checked");
+
+        if(checked == null) {
+            let flg = confirm("선택하지않았습니다. 그대로 진행합니까?");
+            
+            if(flg == true) {
+            } else {
+                return;
+            }            
+        }
+        
+        alert("가입완료");
+
+        location.href = "main.html";
+    }
+</script>

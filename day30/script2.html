@@ -42,6 +42,12 @@
         let userPw = document.querySelector("#userPw").value;
         let pwCheck = document.querySelector("#pwCheck").value;
         
+        var pattern = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
+        if(pattern.test(userId)) {
+            alert("아이디에는 특수문자 사용 불가");
+            return;
+        }
+
         /* 
         let male = document.querySelector("#male").checked;
         let female = document.querySelector("#female").checked;
@@ -102,6 +108,12 @@
         아무것도 체크안된상태에서 '회원가입' 버튼 클릭시
         성별을 선택해주세요 출력
         */
+
+        
+
+
+
+
     }
 
 </script>
